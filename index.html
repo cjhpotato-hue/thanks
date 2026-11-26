@@ -30,7 +30,7 @@ header{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;
 .brand{display:flex;align-items:baseline;justify-content:flex-start;gap:22px;flex-wrap:nowrap;text-align:left}
 .brand .en{font-family:var(--script);font-size:clamp(24px,2.88vw,37px);line-height:1;color:var(--green);white-space:nowrap}
 .brand h1{margin:0;font-family:'Dongle','Jua',sans-serif;font-weight:700;font-size:clamp(53px,5.76vw,78px);line-height:1;padding:4px 0 10px;color:#d62839;letter-spacing:.01em;white-space:nowrap;-webkit-text-stroke:2px #fff;paint-order:stroke fill;text-shadow:0 5px 0 #1f6b45,0 10px 16px rgba(31,107,69,.25)}
-.brand .lead{font-family:'Jua','Gaegu','Noto Sans KR',sans-serif;font-weight:400;font-size:clamp(22px,2.4vw,32px);color:#7a4a2a;white-space:nowrap}
+.brand .lead{font-family:'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif;font-weight:700;font-size:clamp(14px,1.52vw,20px);color:#7a4a2a;white-space:nowrap}
 .brand .sub{font-family:var(--pen);font-weight:400;font-size:clamp(20px,2vw,26px);color:var(--muted)}
 .steam{display:inline-flex;gap:5px;align-items:flex-end;height:34px;margin-left:-6px}
 .steam i{display:block;width:5px;height:22px;border-radius:5px;background:linear-gradient(180deg,rgba(224,112,44,0),rgba(224,112,44,.55));animation:steam 2.6s ease-in-out infinite;opacity:0}
@@ -171,6 +171,32 @@ main>section.panel:first-child{order:2}
 .who .nm{font-size:1.12em}
 .hint,.ready .go,.step .q,.camhint,.stage .msg{font-family:'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif!important;font-weight:700!important;letter-spacing:-.01em}
 .props button span{filter:grayscale(1)!important}
+/* 확인 화면: 꽃바구니 + 연분홍 상자 + 3배 큰 글씨 */
+.ready .basket{width:clamp(300px,30vw,400px);height:auto;margin-bottom:-18px;position:relative;z-index:1}
+.ready .basket-photo{aspect-ratio:16/9;object-fit:cover;border-radius:18px;border:4px solid #fff;box-shadow:0 8px 20px rgba(60,40,20,.22);width:clamp(300px,30vw,400px);max-width:100%}
+.ready .basket-svg{width:clamp(220px,22vw,280px)!important}
+.ready{gap:10px!important}
+.ready .sum{background:#fde8ec!important;border-color:#f4bfca!important;padding:18px 16px!important}
+.ready .sum .to{font-size:clamp(40px,4.2vw,56px)!important;line-height:1.05}
+.ready .sum .ev{font-size:clamp(24px,2.4vw,32px)!important;margin-top:10px;background:#fff!important}
+.ready .sum .st{font-size:clamp(12px,1.2vw,16px)!important;margin-top:8px}
+/* 이름은 모두 제목과 같은 동글체 · 초록 */
+.who .nm,.ready .sum .to,.chip b{font-family:'Dongle','Jua',sans-serif!important;font-weight:700!important;color:#1f6b45!important;letter-spacing:0}
+.who .nm{font-size:1.55em;line-height:1}
+.chip b{font-size:1.5em;line-height:1}
+/* 안내문: 맑은 고딕, 40% 작게 */
+.hint{font-size:clamp(12px,1vw,14px)!important}
+.step .q,.ready .go{font-size:clamp(13px,1.1vw,15px)!important}
+.camhint{font-size:clamp(12px,1vw,14px)!important}
+.stage .msg{font-size:clamp(12px,1vw,14px)!important}
+.props button .tx{font-family:'Jua',sans-serif;font-weight:400;font-size:clamp(15px,1.4vw,18px);filter:none;color:#2f2a24}
+.ready .sum .to span{display:block}
+.ready .sum .to .hrt{color:#d62839;font-family:'Jua',sans-serif;font-size:.6em;line-height:1.2}
+.step .q{font-family:'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo','Noto Sans KR',sans-serif!important;font-weight:700!important}
+.ready .sum .to{font-size:clamp(34px,3.5vw,46px)!important;line-height:.95!important}
+.ready .sum{padding:14px 14px 10px!important}
+.ready .sum .ev{margin-top:6px!important}
+.ready .back{margin-top:0!important;padding:6px 22px!important}
 </style>
 </head>
 <body>
@@ -220,7 +246,7 @@ main>section.panel:first-child{order:2}
         <div class="step" id="stepWho"><div class="q">누구에게 보낼까요?</div><div class="who" id="who"></div></div>
         <div class="step hidden" id="stepPat"><div class="q">줄 장식을 골라 주세요</div><div class="moods" id="moods"></div><button type="button" class="back" data-to="0">← 이전</button></div>
         <div class="step hidden" id="stepFr"><div class="q">편지지 모양을 골라 주세요</div><div class="moods frames" id="frames"></div><button type="button" class="back" data-to="1">← 이전</button></div>
-        <div class="step hidden" id="stepReady"><div class="ready"><div class="sum" id="sum"></div><div class="go">이제 오른쪽에서 소품을 고르고<br>[사진 찍기]를 눌러 주세요!</div><button type="button" class="back" data-to="0">처음부터 다시 고르기</button></div></div>
+        <div class="step hidden" id="stepReady"><div class="ready"><img class="basket basket-photo" alt="축하 꽃바구니" src="https://images.unsplash.com/photo-1469317835793-6d02c2392778?w=800&h=450&q=80&auto=format&fit=crop" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><svg class="basket basket-svg" style="display:none" viewBox="0 0 220 150" aria-hidden="true"><path d="M40 78h140l-14 62H54z" fill="#c98a4b" stroke="#8a5a2b" stroke-width="3"/><path d="M50 92h120M56 108h108M60 124h100M80 80l-6 60M110 80v60M140 80l6 60" stroke="#8a5a2b" stroke-width="2.4" opacity=".7"/><path d="M48 80c0-50 124-50 124 0" fill="none" stroke="#8a5a2b" stroke-width="6"/><g stroke="#3f7a3a" stroke-width="2"><path d="M58 76c-10-10-22-6-24 2 8 4 18 4 24-2zM162 76c10-10 22-6 24 2-8 4-18 4-24-2z" fill="#5aa35a"/></g><g stroke="#8c2244" stroke-width="2"><circle cx="72" cy="62" r="15" fill="#f48aa5"/><circle cx="105" cy="52" r="17" fill="#e8455f"/><circle cx="140" cy="58" r="16" fill="#ffc2d1"/><circle cx="160" cy="70" r="11" fill="#e8455f"/><circle cx="90" cy="72" r="11" fill="#ffd54a"/><circle cx="124" cy="72" r="11" fill="#f9b8c8"/></g><g fill="#fff" opacity=".85"><circle cx="72" cy="62" r="5"/><circle cx="105" cy="52" r="6"/><circle cx="140" cy="58" r="5"/></g><path d="M96 98c-12-12-28-4-20 6 6 6 20 2 20-6zM124 98c12-12 28-4 20 6-6 6-20 2-20-6z" fill="#fff" stroke="#c8202f" stroke-width="3"/><circle cx="110" cy="99" r="6" fill="#c8202f"/></svg><div class="sum" id="sum"></div><div class="go">이제 오른쪽에서 소품을 고르고<br>[사진 찍기]를 눌러 주세요!</div><button type="button" class="back" data-to="0">처음부터 다시 고르기</button></div></div>
         </div>
         <div class="result hidden" id="result">
           <div class="chip" id="chip"></div>
@@ -265,6 +291,7 @@ var RECIPIENTS = [
 var THANKS_EN     = 'Thank you';          // 감사 모드 아래 영문
 var CONGRATS_EN   = 'Congratulations!';   // 축하 모드 아래 영문
 var BUBBLE_H      = 440;                       // 말풍선 높이 (px, 클수록 글 쓸 자리가 넓어짐)
+var GIVE_LINE     = '가 드려요';   // 출력물 맨 아래 '♥ ______ 가 드려요 ♥'
 var FROM_LINE     = 'From.';                   // 보내는 사람 칸 앞 글자
 var CHURCH_NAME   = '';                        // 교회 이름 (예: '○○교회'). 비우면 표시 안 함
 var SHOW_DATE     = true;                      // 오늘 날짜 찍기
@@ -348,8 +375,8 @@ var STEPS=['stepWho','stepPat','stepFr','stepReady'];
 function goStep(n){
  STEPS.forEach(function(id,i){$(id).classList.toggle('hidden',i!==n);});
  if(n===3){var w=state.who||RECIPIENTS[0],m=state.mood||MOODS[0],f=state.frame||FRAMES[0];
-  $('sum').innerHTML='<div class="to">'+esc(w.a)+' ♥ '+esc(w.b)+'께</div><div class="ev">'+esc(w.event)+' · '+(w.mode==='congrats'?'축하':'감사')+'</div><div class="st">'+esc(m.label)+' 장식 · '+esc(f.label)+' 편지지</div>';}
- updateSnap();
+  $('sum').innerHTML='<div class="to"><span>'+esc(w.a)+'</span><span class="hrt">♥</span><span>'+esc(w.b)+'께</span></div><div class="ev">'+esc(w.event)+' · '+(w.mode==='congrats'?'축하':'감사')+'</div><div class="st">'+esc(m.label)+' 장식 · '+esc(f.label)+' 편지지</div>';}
+ updateSnap();if(n===3)$('hint').textContent='';
 }
 Array.prototype.forEach.call(document.querySelectorAll('.step .back'),function(b){b.onclick=function(){goStep(+b.dataset.to);};});
 Array.prototype.forEach.call(document.querySelectorAll('.mood:not(.fr)'),function(b){b.addEventListener('click',function(){goStep(2);});});
@@ -474,12 +501,12 @@ function drawCover(ctx,src,sw,sh,W,H,mirror){
    소품은 화면 위 버튼으로 고르고, 손가락으로 끌어 옮기거나 [크게]/[작게]로 크기를 바꿀 수 있어요. */
 var PROPS = [
  {key:'glasses', icon:'🕶️', label:'선글라스'},
- {key:'mustache',icon:'🥸', label:'콧수염'},
+ {key:'mustache',icon:'<b class="tx">콧수염</b>', label:'콧수염'},
  {key:'crown',   icon:'<svg viewBox="0 0 48 48" stroke="#333" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M8 36V16l9 8 7-13 7 13 9-8v20z"/><path d="M8 31h32"/><circle cx="8" cy="13" r="2.4"/><circle cx="24" cy="8" r="2.4"/><circle cx="40" cy="13" r="2.4"/></svg>', label:'왕관'},
  {key:'ribbon',  icon:'<svg viewBox="0 0 48 48" stroke="#333" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M7 36C7 20 15 12 24 12s17 8 17 24"/><path d="M30 14c-1-6 -9-9-10-3 1 4 6 4 10 3zM30 14c3-5 11-6 11 0-2 4-7 3-11 0z"/><circle cx="30" cy="14" r="2"/><path d="M29 16l-3 8M31 16l3 8"/></svg>', label:'리본 머리띠'},
- {key:'sparkle', icon:'<svg viewBox="0 0 48 48" stroke="#333" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="28" r="9"/><path d="M24 4q0 6 6 6-6 0-6 6 0-6-6-6 6 0 6-6zM9 13q0 4 4 4-4 0-4 4 0-4-4-4 4 0 4-4zM39 13q0 4 4 4-4 0-4 4 0-4-4-4 4 0 4-4z"/><path d="M10 30H5M43 30h-5M13 41l-3 3M35 41l3 3"/></svg>', label:'반짝이'},
- {key:'bouquet', icon:'<svg viewBox="0 0 48 48" stroke="#333" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22l9 22 9-22z"/><circle cx="17" cy="15" r="5"/><circle cx="31" cy="15" r="5"/><circle cx="24" cy="9" r="5"/><path d="M20 32l4 3 4-3"/></svg>', label:'꽃다발'},
  {key:'beanie',  icon:'<svg viewBox="0 0 48 48" stroke="#333" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 34c0-12 7-20 15-20s15 8 15 20"/><rect x="7" y="32" width="34" height="8" rx="3"/><circle cx="24" cy="9" r="5"/><path d="M14 33v6M20 33v6M26 33v6M32 33v6"/></svg>', label:'털모자'}
+ ,{key:'love',    icon:'<svg viewBox="0 0 48 48" stroke="#333" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 18v12h6M15 24a4.5 6 0 1 0 9 0 4.5 6 0 1 0-9 0M26 18l3.5 12 3.5-12M43 18h-6v12h6M37 24h5"/><path d="M24 42c-4-3-6-5-6-7a3 3 0 0 1 6-1 3 3 0 0 1 6 1c0 2-2 4-6 7z"/></svg>', label:'LOVE'},
+ {key:'hair',    icon:'<svg viewBox="0 0 48 48"><path d="M9 44C6 30 6 14 14 9c6-4 14-4 20 0 8 5 8 21 5 35h-7c1-9 1-17 0-22-3-4-9-5-13-1-3 2-5 2-5 4-1 6-1 13 0 19z" fill="#141414"/></svg>', label:'긴머리 가발'}
 ];
 var propKey = 'glasses';   // 처음에 골라져 있는 소품
 var hats=[],autoMode=true,dragging=null,selHat=-1;
@@ -546,6 +573,28 @@ function drawProp(x,k,cx,by,w){
   };
   path();x.strokeStyle='rgba(255,255,255,.95)';x.lineWidth=Math.max(5,w*.05);x.stroke();
   path();x.strokeStyle='#1b1b1b';x.lineWidth=Math.max(2.5,w*.022);x.stroke();
+ }else if(k==='love'){   // LOVE 선 글자 (머리 위)
+  var fs=w*.34;x.font="900 "+fs+"px 'Jua','Noto Sans KR',sans-serif";x.textAlign='center';x.textBaseline='alphabetic';x.lineJoin='round';
+  var ty=by-w*.12,txt='LOVE';
+  x.strokeStyle='rgba(255,255,255,.95)';x.lineWidth=Math.max(6,w*.05);x.strokeText(txt,cx,ty);
+  x.strokeStyle='#1b1b1b';x.lineWidth=Math.max(2.5,w*.02);x.strokeText(txt,cx,ty);
+  var hp=function(hx,hy,s){x.beginPath();x.moveTo(hx,hy+s*.8);x.bezierCurveTo(hx-s*1.15,hy+s*.05,hx-s*.65,hy-s*.8,hx,hy-s*.28);x.bezierCurveTo(hx+s*.65,hy-s*.8,hx+s*1.15,hy+s*.05,hx,hy+s*.8);x.closePath();
+   x.strokeStyle='rgba(255,255,255,.95)';x.lineWidth=Math.max(5,w*.04);x.stroke();x.strokeStyle='#1b1b1b';x.lineWidth=Math.max(2,w*.016);x.stroke();};
+  var tw=x.measureText(txt).width;hp(cx-tw/2-w*.1,ty-fs*.55,w*.06);hp(cx+tw/2+w*.1,ty-fs*.45,w*.05);
+ }else if(k==='hair'){   // 검정 긴머리 가발 (얼굴 자리는 비워 둠)
+  x.beginPath();
+  x.moveTo(cx-w*.56,by+w*1.15);x.bezierCurveTo(cx-w*.62,by+w*.5,cx-w*.62,by-w*.05,cx-w*.42,by-w*.22);
+  x.bezierCurveTo(cx-w*.22,by-w*.38,cx+w*.22,by-w*.38,cx+w*.42,by-w*.22);
+  x.bezierCurveTo(cx+w*.62,by-w*.05,cx+w*.62,by+w*.5,cx+w*.56,by+w*1.15);
+  x.quadraticCurveTo(cx+w*.46,by+w*1.2,cx+w*.36,by+w*1.1);
+  x.bezierCurveTo(cx+w*.36,by+w*.7,cx+w*.36,by+w*.35,cx+w*.33,by+w*.18);
+  x.bezierCurveTo(cx+w*.22,by+w*.0,cx+w*.0,by-w*.04,cx-w*.12,by+w*.1);   // 옆으로 넘긴 앞머리
+  x.bezierCurveTo(cx-w*.2,by+w*.16,cx-w*.3,by+w*.14,cx-w*.33,by+w*.2);
+  x.bezierCurveTo(cx-w*.36,by+w*.35,cx-w*.36,by+w*.7,cx-w*.36,by+w*1.1);
+  x.quadraticCurveTo(cx-w*.46,by+w*1.2,cx-w*.56,by+w*1.15);x.closePath();
+  x.fillStyle='#141414';x.fill();
+  x.strokeStyle='rgba(255,255,255,.28)';x.lineWidth=Math.max(1.5,w*.01);
+  [[-.5,.1,-.48,.9],[-.44,0,-.42,.8],[.46,.05,.48,.9],[.4,0,.42,.75],[-.15,-.25,-.35,-.05],[.1,-.26,.3,-.1]].forEach(function(q){x.beginPath();x.moveTo(cx+q[0]*w,by+q[1]*w);x.quadraticCurveTo(cx+(q[0]+q[2])/2*w+w*.04,by+(q[1]+q[3])/2*w,cx+q[2]*w,by+q[3]*w);x.stroke();});
  }else if(k==='mustache'){
   var my=by+w*.42,mw=w*.24;x.fillStyle='#2b1a10';
   [-1,1].forEach(function(d){x.beginPath();x.moveTo(cx,my-w*.03);x.bezierCurveTo(cx+d*mw*.4,my-w*.09,cx+d*mw*.9,my-w*.06,cx+d*mw*1.05,my+w*.01);
@@ -556,7 +605,7 @@ function drawProp(x,k,cx,by,w){
 }
 function hatBox(h,W,H){var w=h.w*W,cx=h.x*W,by=h.y*H,k=propKey,b;
  if(k==='glasses')b=[-.45,.45,.04,.38];else if(k==='crown')b=[-.34,.34,-.36,.06];else if(k==='ribbon')b=[-.45,.45,-.5,.2];
- else if(k==='sparkle')b=[-.85,.85,-.66,.66];else if(k==='bouquet')b=[.2,.68,.55,1.22];else if(k==='beanie')b=[-.48,.48,-.7,.16];else b=[-.38,.38,.28,.56];
+ else if(k==='sparkle')b=[-.85,.85,-.66,.66];else if(k==='love')b=[-.55,.55,-.6,-.02];else if(k==='hair')b=[-.64,.64,-.4,1.22];else if(k==='beanie')b=[-.48,.48,-.7,.16];else b=[-.38,.38,.28,.56];
  return {l:cx+b[0]*w,r:cx+b[1]*w,t:by+b[2]*w,b:by+b[3]*w};}
 function scarfBox(){return {l:1,r:0,t:1,b:0};}
 var PROP_GRAY = true;   // 소품을 흑백으로 보여 주기 (출력이 흑백이라서)
@@ -911,7 +960,7 @@ function drawReceipt(){
 
  /* ---------- 1. 문양 줄 + 제목 ---------- */
  y=34;patternRow(y);y+=40;
- fit(WHO.title||LETTER_TITLE,42,"900 {px}px "+SERIF,64);
+ y+=6;   /* 맨 위 제목 줄(○○님 감사합니다)은 삭제함 */
  toLine();
  /* ---------- 2. 편지지 (여기에 마음을 써요) ---------- */
  var fx=P+8,fw=W-P*2-16,fh=FR==='heart'?480:FR==='star'?520:FR==='circle'?440:BUBBLE_H;
@@ -923,9 +972,7 @@ function drawReceipt(){
  corner.forEach(function(q,i){if(PAT==='sheep'){ctx.save();ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(q[0],q[1],20,0,7);ctx.fill();ctx.restore();sheep(q[0],q[1],38);}
   else{ctx.save();ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(q[0],q[1],17,0,7);ctx.fill();ctx.restore();motif(q[0],q[1],32,i%3!==0);}});
  y=ft+fh+(FR==='cloud'?22:8);
- ctx.textAlign='right';ctx.font="700 28px "+HAND;ctx.fillText(FROM_LINE+'  ',W-P-190,y+14);
- ctx.save();ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(W-P-186,y+46);ctx.lineTo(W-P-14,y+46);ctx.stroke();ctx.restore();
- y+=76;
+ y+=28;   /* From 칸 대신 맨 아래에 '♥ ______ 가 드려요 ♥' */
  /* ---------- 3. 사진 (둥근 모서리) ---------- */
  var pw=W-P*2-36,ph=Math.round(pw*PHOTO_H/PHOTO_W),px=(W-pw)/2,R=28;
  ctx.save();ctx.lineWidth=1.6;rr(px-10,y-10,pw+20,ph+20,R+8);ctx.stroke();ctx.restore();
@@ -939,7 +986,14 @@ function drawReceipt(){
  var foot=[CHURCH_NAME,SHOW_DATE?today():''].filter(Boolean).join('  ·  ');
  if(foot)fit(foot,22,"700 {px}px "+SERIF,36);
  if(RECEIPT_FOOTER)fit(RECEIPT_FOOTER,22,"700 {px}px "+SERIF,36);
- y+=20;
+ /* 맨 아래: ♥ ____________ 가 드려요 ♥ */
+ y+=22;(function(){ctx.font="700 32px "+HAND;var tail=GIVE_LINE,tw=ctx.measureText(tail).width,lw=230,hs=18,gap=14;
+  var total=hs*2+gap*2+lw+10+tw,x0=(W-total)/2,cy=y+18;
+  hh(x0+hs/2,cy,hs*.9,true);
+  ctx.save();ctx.lineWidth=2.4;ctx.beginPath();ctx.moveTo(x0+hs+gap,y+36);ctx.lineTo(x0+hs+gap+lw,y+36);ctx.stroke();ctx.restore();
+  ctx.textAlign='left';ctx.fillText(tail,x0+hs+gap+lw+10,y+2);ctx.textAlign='center';
+  hh(x0+hs+gap*2+lw+10+tw+hs/2,cy,hs*.9,true);y+=58;})();
+ y+=14;
  var out=document.createElement('canvas');out.width=W;out.height=y;out.getContext('2d').drawImage(tmp,0,0);
  return out;
 }
