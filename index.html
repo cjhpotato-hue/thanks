@@ -6,20 +6,20 @@
 <title>목사님, 감사합니다</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Song+Myung&family=Gowun+Batang:wght@400;700&family=Nanum+Pen+Script&family=Diphylleia&family=Gaegu:wght@400;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Serif+KR:wght@700;900&family=Nanum+Brush+Script&family=Bagel+Fat+One&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Song+Myung&family=Gowun+Batang:wght@400;700&family=Nanum+Pen+Script&family=Diphylleia&family=Gaegu:wght@400;700&family=Jua&family=Dongle:wght@700&family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Serif+KR:wght@700;900&family=Nanum+Brush+Script&family=Bagel+Fat+One&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#fff1f3; --paper:#fffafb; --ink:#3d2328; --muted:#8a5a64;
-  --green:#b23a5b; --green-d:#8c2244; --red:#e0607e; --red-d:#b23a5b; --gold:#c99a3c;
-  --line:#f6d3da; --shadow:0 14px 34px rgba(140,34,68,.14);
+  --bg:#fbf6ee; --paper:#fffdf8; --ink:#2f2a24; --muted:#7a5a3a;
+  --green:#1f6b45; --green-d:#164d32; --red:#d62839; --red-d:#a31c2a; --gold:#c99a3c;
+  --line:#ead9c4; --shadow:0 14px 34px rgba(60,40,20,.13);
   --script:'Great Vibes',cursive; --title:'Diphylleia','Song Myung',serif; --gothic:'Malgun Gothic','맑은 고딕','Noto Sans KR','Apple SD Gothic Neo',sans-serif;
   --serif:'Gowun Batang','Noto Serif KR',serif; --sans:'Noto Sans KR','Apple SD Gothic Neo',sans-serif;
   --pen:'Nanum Pen Script',cursive;
 }
 *{box-sizing:border-box}
 html,body{margin:0;height:100%}
-body{background:var(--bg);color:var(--ink);font-family:var(--sans);overflow:hidden;
-  background-image:radial-gradient(circle at 12% 0%,rgba(255,250,251,.95),transparent 45%),radial-gradient(circle at 100% 100%,rgba(224,96,126,.18),transparent 55%);}
+body{background:var(--bg);color:var(--ink);font-family:'Jua','Gaegu','Noto Sans KR',sans-serif;overflow:hidden;
+  background-image:radial-gradient(circle at 12% 0%,rgba(255,250,251,.95),transparent 45%),radial-gradient(circle at 100% 100%,rgba(31,107,69,.12),transparent 55%);}
 button{font:inherit;-webkit-tap-highlight-color:transparent;cursor:pointer}
 .snow{position:fixed;inset:0;pointer-events:none;z-index:50;overflow:hidden}
 .snow i{position:absolute;bottom:-50px;display:block;font-style:normal;line-height:1;font-family:sans-serif;
@@ -29,9 +29,8 @@ button{font:inherit;-webkit-tap-highlight-color:transparent;cursor:pointer}
 header{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:0 4px 8px;flex:none}
 .brand{display:flex;align-items:baseline;justify-content:flex-start;gap:22px;flex-wrap:nowrap;text-align:left}
 .brand .en{font-family:var(--script);font-size:clamp(30px,3.6vw,46px);line-height:1;color:var(--green);white-space:nowrap}
-.brand h1{margin:0;font-family:'Noto Serif KR',var(--serif);font-weight:900;font-size:clamp(36px,4.2vw,54px);line-height:1.2;color:#b23a5b;letter-spacing:.02em;white-space:nowrap;
-  text-shadow:0 1px 0 #f6d77a,0 3px 0 #c99a3c,0 7px 12px rgba(140,34,68,.25)}
-.brand .lead{font-family:'Gaegu',var(--pen);font-weight:700;font-size:clamp(22px,2.3vw,30px);color:#8a5a64;white-space:nowrap}
+.brand h1{margin:0;font-family:'Dongle','Jua',sans-serif;font-weight:700;font-size:clamp(66px,7.2vw,98px);line-height:1;padding:4px 0 10px;color:#d62839;letter-spacing:.01em;white-space:nowrap;-webkit-text-stroke:2px #fff;paint-order:stroke fill;text-shadow:0 5px 0 #1f6b45,0 10px 16px rgba(31,107,69,.25)}
+.brand .lead{font-family:'Jua','Gaegu','Noto Sans KR',sans-serif;font-weight:400;font-size:clamp(28px,3vw,40px);color:#7a4a2a;white-space:nowrap}
 .brand .sub{font-family:var(--pen);font-weight:400;font-size:clamp(25px,2.5vw,33px);color:var(--muted)}
 .steam{display:inline-flex;gap:5px;align-items:flex-end;height:34px;margin-left:-6px}
 .steam i{display:block;width:5px;height:22px;border-radius:5px;background:linear-gradient(180deg,rgba(224,112,44,0),rgba(224,112,44,.55));animation:steam 2.6s ease-in-out infinite;opacity:0}
@@ -42,8 +41,8 @@ header{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;
   background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='18'%3E%3Cpath d='M0 9h44' stroke='%23f2b6c4' stroke-width='1.5' stroke-dasharray='3 4'/%3E%3Cpath d='M22 15c-6-4-8-7-8-9.5a4 4 0 0 1 8-1 4 4 0 0 1 8 1c0 2.5-2 5.5-8 9.5z' fill='%23e0607e'/%3E%3C/svg%3E") repeat-x}
 main{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:16px}
 .panel{background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);min-height:0;display:flex;flex-direction:column;padding:16px;position:relative;overflow:hidden}
-.ptitle{display:flex;align-items:center;gap:10px;font-family:var(--gothic);font-weight:700;font-size:clamp(17px,1.6vw,21px);margin:0 0 12px;flex:none}
-.ptitle b{display:inline-flex;width:30px;height:30px;border-radius:50%;background:var(--green);color:#fffaf2;align-items:center;justify-content:center;font-family:var(--sans);font-size:15px}
+.ptitle{display:flex;align-items:center;gap:10px;font-family:'Jua','Gaegu','Noto Sans KR',sans-serif;font-weight:400;font-size:clamp(28px,2.8vw,38px);margin:0 0 12px;flex:none}
+.ptitle b{display:inline-flex;width:46px;height:46px;flex:none;border-radius:50%;background:var(--green);color:#fffaf2;align-items:center;justify-content:center;font-family:'Jua','Gaegu','Noto Sans KR',sans-serif;font-size:24px}
 /* camera */
 .stage{flex:1;min-height:0;position:relative;border-radius:12px;overflow:hidden;background:#2e1d12;display:flex;align-items:center;justify-content:center}
 .cam{position:relative;height:100%;max-width:100%;aspect-ratio:4/3;overflow:hidden;border-radius:8px;touch-action:none}
@@ -64,7 +63,7 @@ main{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1.2fr) minm
 .hattools button.on{background:var(--red);border-color:var(--red)}
 .camhint{position:absolute;top:10px;left:0;right:0;text-align:center;color:#fff;font-size:clamp(13px,1.2vw,15px);text-shadow:0 1px 6px rgba(0,0,0,.7);pointer-events:none}
 .actions{display:flex;gap:10px;margin-top:12px;flex:none}
-.btn{flex:1;min-height:64px;border-radius:12px;border:2px solid #c23b62;background:#c23b62;box-shadow:0 4px 0 #8c2244;color:#fffaf2;font-weight:700;font-size:clamp(18px,1.8vw,23px);display:flex;align-items:center;justify-content:center;gap:10px;transition:transform .12s,background .2s,opacity .2s}
+.btn{flex:1;min-height:64px;border-radius:12px;border:2px solid #c8202f;background:#c8202f;box-shadow:0 4px 0 #8e1520;color:#fffaf2;font-weight:700;font-size:clamp(18px,1.8vw,23px);display:flex;align-items:center;justify-content:center;gap:10px;transition:transform .12s,background .2s,opacity .2s}
 .btn:active{transform:scale(.98)}
 .btn:disabled{opacity:.42}
 .btn.green{background:var(--green);border-color:var(--green)}
@@ -75,34 +74,34 @@ main{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1.2fr) minm
 /* right */
 .body{flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;display:flex;flex-direction:column;gap:12px;padding-right:2px}
 .moods{display:grid;grid-template-columns:1fr 1fr;gap:9px;flex:1;min-height:0;grid-auto-rows:1fr}
-.mood{border:2px solid #f6c9d3;background:#fff;border-radius:12px;padding:6px 12px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:var(--ink);transition:border-color .15s,background .15s,transform .1s;min-height:54px}
+.mood{border:2px solid #ead9c4;background:#fff;border-radius:12px;padding:6px 12px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:var(--ink);transition:border-color .15s,background .15s,transform .1s;min-height:54px}
 .mood:active{transform:scale(.98)}
-.mood b{font-family:'Gaegu',var(--pen);font-weight:700;font-size:clamp(23px,2.3vw,30px);line-height:1.1}
+.mood b{font-family:'Jua','Gaegu','Noto Sans KR',sans-serif;font-weight:400;font-size:clamp(23px,2.3vw,30px);line-height:1.1}
 .mood span{font-family:'Gaegu',var(--pen);font-size:clamp(15px,1.45vw,19px);color:var(--muted);line-height:1.25;word-break:keep-all;letter-spacing:-.02em}
-.mood.on{border-color:#c23b62;background:#fde3ea;box-shadow:0 0 0 3px rgba(194,59,98,.18)}
-.mood.on b{color:#b23a5b}
+.mood.on{border-color:#c8202f;background:#fdecea;box-shadow:0 0 0 3px rgba(200,32,47,.18)}
+.mood.on b{color:#c8202f}
 .who{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;flex:none;margin-bottom:10px}
-.who button{border:2px solid #f6c9d3;background:#fff;border-radius:12px;padding:8px 6px;display:flex;flex-direction:column;align-items:center;gap:1px;font-family:'Gaegu',var(--pen);font-weight:700;font-size:clamp(16px,1.55vw,20px);color:var(--ink);line-height:1.15}
-.who button i{font-style:normal;color:#e0607e;font-size:.9em}
-.who button.on{border-color:#c23b62;background:#fde3ea;color:#8c2244;box-shadow:0 0 0 3px rgba(194,59,98,.18)}
+.who button{border:2px solid #ead9c4;background:#fff;border-radius:12px;padding:8px 6px;display:flex;flex-direction:column;align-items:center;gap:1px;font-family:'Jua','Gaegu','Noto Sans KR',sans-serif;font-weight:400;font-size:clamp(16px,1.55vw,20px);color:var(--ink);line-height:1.15}
+.who button i{font-style:normal;color:#d62839;font-size:.9em}
+.who button.on{border-color:#c8202f;background:#fdecea;color:#1f6b45;box-shadow:0 0 0 3px rgba(200,32,47,.18)}
 .props{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;margin:0 0 10px;flex:none}
-.props button{border:2px solid #f6c9d3;background:#fff;border-radius:12px;padding:5px 2px;display:flex;flex-direction:column;align-items:center;gap:0;font-family:'Gaegu',var(--pen);font-weight:700;font-size:clamp(13px,1.25vw,16px);color:var(--ink);line-height:1.1}
+.props button{border:2px solid #ead9c4;background:#fff;border-radius:12px;padding:5px 2px;display:flex;flex-direction:column;align-items:center;gap:0;font-family:'Jua','Gaegu','Noto Sans KR',sans-serif;font-weight:400;font-size:clamp(13px,1.25vw,16px);color:var(--ink);line-height:1.1}
 .props button span{font-size:clamp(22px,2.3vw,30px);line-height:1.2}
-.props button.on{border-color:#c23b62;background:#fde3ea;color:#8c2244}
+.props button.on{border-color:#c8202f;background:#fdecea;color:#1f6b45}
 .choose{display:flex;flex-direction:column;gap:6px;flex:1;min-height:0}
-.slab{font-family:var(--gothic);font-weight:700;font-size:clamp(14px,1.3vw,16px);color:#8c2244;margin-top:4px}
+.slab{font-family:'Jua','Gaegu','Noto Sans KR',sans-serif;font-weight:400;font-size:clamp(14px,1.3vw,16px);color:#1f6b45;margin-top:4px}
 .moods{grid-template-columns:repeat(5,minmax(0,1fr))!important;grid-auto-rows:auto!important;flex:none!important}
 .moods.frames{grid-template-columns:repeat(3,minmax(0,1fr))!important}
 .mood{padding:8px 4px!important;gap:2px!important}
 .mood b{font-size:clamp(18px,1.8vw,23px)!important}
-.who button .ev{display:inline-block;margin-top:3px;padding:0 8px;border-radius:999px;background:#fde3ea;color:#b23a5b;font-size:.74em;white-space:nowrap;letter-spacing:-.03em}
+.who button .ev{display:inline-block;margin-top:3px;padding:0 8px;border-radius:999px;background:#fdecea;color:#c8202f;font-size:.74em;white-space:nowrap;letter-spacing:-.03em}
 .who button .ev.c{background:#fff1c9;color:#8a6200}
 .mood svg{width:clamp(30px,3vw,40px);height:clamp(30px,3vw,40px);flex:none;margin-bottom:2px}
-.mood .tag{display:inline-block;margin-top:2px;padding:1px 10px;border-radius:999px;background:#fde3ea;color:#b23a5b;font-family:'Gaegu',var(--pen);font-weight:700;font-size:clamp(15px,1.4vw,18px)}
+.mood .tag{display:inline-block;margin-top:2px;padding:1px 10px;border-radius:999px;background:#fdecea;color:#c8202f;font-family:'Jua','Gaegu','Noto Sans KR',sans-serif;font-weight:400;font-size:clamp(15px,1.4vw,18px)}
 .result{display:flex;flex-direction:column;gap:12px}
 .chip{align-self:center;border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 16px;font-size:clamp(14px,1.3vw,16px);color:var(--muted)}
 .chip b{color:var(--red-d)}
-.pcard{border:1px solid var(--line);border-radius:12px;background:linear-gradient(180deg,#fffcfd,#fdecef);padding:16px 18px;text-align:center}
+.pcard{border:1px solid var(--line);border-radius:12px;background:linear-gradient(180deg,#fffdf8,#f8efe3);padding:16px 18px;text-align:center}
 .pcard .lab{font-family:'Cormorant Garamond',serif;font-weight:700;letter-spacing:.2em;color:var(--gold);font-size:13px}
 .ptl{font-family:var(--title);font-size:clamp(24px,2.4vw,32px);color:var(--green-d);margin:6px 0 2px}
 .pby{font-family:var(--serif);font-weight:700;color:var(--muted);font-size:clamp(14px,1.3vw,17px)}
@@ -121,6 +120,45 @@ main{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1.2fr) minm
   main{grid-template-columns:1fr} .stage{min-height:62vw}
   .credit{display:none} .moods{grid-auto-rows:auto}
 }
+
+/* ---- 큰 글씨 (어르신도 잘 보이게) ---- */
+.btn{font-weight:400!important;font-size:clamp(28px,2.8vw,36px)!important}
+.btn.big{min-height:90px!important;font-size:clamp(34px,3.4vw,44px)!important}
+.btn svg{width:40px!important;height:40px!important}
+.row .btn{min-height:72px!important;font-size:clamp(26px,2.6vw,32px)!important}
+.hint{font-size:clamp(24px,2.4vw,30px)!important;line-height:1.35}
+.hattools button{font-size:clamp(24px,2.4vw,30px)!important;padding:8px 22px!important;font-family:'Jua','Gaegu','Noto Sans KR',sans-serif}
+.camhint{font-size:clamp(22px,2.2vw,28px)!important}
+.stage .msg{font-size:clamp(24px,2.4vw,30px)!important}
+.props{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important}
+.props button{flex-direction:row!important;justify-content:center;gap:8px!important;padding:6px 4px!important;font-size:clamp(24px,2.4vw,30px)!important}
+.props button span{font-size:clamp(32px,3.2vw,42px)!important;filter:grayscale(1) contrast(1.1)}
+.who{grid-template-columns:1fr!important;gap:12px!important}
+.who button{flex-direction:row!important;flex-wrap:wrap;justify-content:center;gap:4px 10px!important;padding:14px 10px!important;font-size:clamp(28px,2.8vw,36px)!important}
+.who button .ev{font-size:.72em!important;padding:2px 14px!important;margin-top:0!important;flex-basis:auto}
+.moods{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important}
+.mood{padding:14px 6px!important;gap:6px!important}
+.mood b{font-size:clamp(30px,3vw,40px)!important;font-weight:400!important}
+.mood svg{width:clamp(52px,5.2vw,70px)!important;height:clamp(52px,5.2vw,70px)!important;filter:grayscale(1) contrast(1.15)}
+.step .q{font-size:clamp(30px,3vw,40px);color:#1f6b45;text-align:center;margin:4px 0 14px}
+.step .back{margin-top:14px;align-self:center;border:2px solid var(--line);background:#fff;border-radius:999px;padding:8px 28px;font-family:'Jua','Gaegu','Noto Sans KR',sans-serif;font-size:clamp(24px,2.4vw,30px);color:var(--muted)}
+.step{display:flex;flex-direction:column}
+.ready{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;padding-top:6px}
+.ready .sum{border:2px solid var(--line);border-radius:16px;background:#fff;padding:16px 18px;width:100%;box-sizing:border-box}
+.ready .sum .to{font-size:clamp(28px,2.8vw,36px);color:#1f6b45}
+.ready .sum .ev{display:inline-block;margin-top:8px;padding:2px 16px;border-radius:999px;background:#eee;color:#333;font-size:clamp(22px,2.2vw,28px)}
+.ready .sum .st{margin-top:10px;font-size:clamp(24px,2.4vw,30px);color:#555}
+.ready .go{font-size:clamp(30px,3vw,40px);color:#1f6b45;line-height:1.35}
+.chip{font-size:clamp(26px,2.6vw,32px)!important}
+.pcard{display:none!important}
+.ptl{font-family:'Jua','Gaegu','Noto Sans KR',sans-serif!important;font-size:clamp(36px,3.6vw,46px)!important}
+.pby{font-family:'Jua','Gaegu','Noto Sans KR',sans-serif!important;font-weight:400!important;font-size:clamp(24px,2.4vw,30px)!important}
+.preview img{width:min(100%,280px)!important}
+.lights{height:18px;margin:4px 0 12px;flex:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='18'%3E%3Cpath d='M0 3q15 10 30 0t30 0' fill='none' stroke='%231f6b45' stroke-width='3'/%3E%3Ccircle cx='15' cy='10' r='5' fill='%23d62839'/%3E%3Ccircle cx='45' cy='10' r='5' fill='%23e9b949'/%3E%3C/svg%3E") repeat-x}
+.ptitle b{background:#1f6b45!important}
+/* 1번 편지지 고르기를 왼쪽, 2번 카메라를 오른쪽에 */
+main{grid-template-columns:minmax(0,1fr) minmax(0,1.2fr)!important}
+main>section.panel:first-child{order:2}
 </style>
 </head>
 <body>
@@ -130,10 +168,11 @@ main{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1.2fr) minm
     <div class="brand"><h1 id="koTitle"></h1><span class="lead" id="leadLine"></span></div>
     <div class="credit" id="credit"></div>
   </header>
-  <div class="garland"></div>
+  <div class="lights"></div>
+  
   <main>
     <section class="panel">
-      <div class="ptitle"><b>2</b>소품을 골라 찰칵</div>
+      <div class="ptitle"><b>2</b>소품 쓰고 찰칵</div>
       <div class="props" id="props"></div>
       <div class="stage">
         <div class="cam" id="cam">
@@ -162,14 +201,13 @@ main{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1.2fr) minm
       <input type="file" id="fileInput" accept="image/*" capture="user" class="hidden">
     </section>
     <section class="panel">
-      <div class="ptitle" id="rightTitle"><b>1</b>받는 분과 편지지를 골라 주세요</div>
+      <div class="ptitle" id="rightTitle"><b>1</b>편지지 고르기</div>
       <div class="body">
         <div class="choose" id="choose">
-        <div class="who" id="who"></div>
-        <div class="slab">줄 장식</div>
-        <div class="moods" id="moods"></div>
-        <div class="slab">편지지 모양</div>
-        <div class="moods frames" id="frames"></div>
+        <div class="step" id="stepWho"><div class="q">누구에게 보낼까요?</div><div class="who" id="who"></div></div>
+        <div class="step hidden" id="stepPat"><div class="q">줄 장식을 골라 주세요</div><div class="moods" id="moods"></div><button type="button" class="back" data-to="0">← 이전</button></div>
+        <div class="step hidden" id="stepFr"><div class="q">편지지 모양을 골라 주세요</div><div class="moods frames" id="frames"></div><button type="button" class="back" data-to="1">← 이전</button></div>
+        <div class="step hidden" id="stepReady"><div class="ready"><div class="sum" id="sum"></div><div class="go">이제 오른쪽에서 소품을 고르고<br>[사진 찍기]를 눌러 주세요!</div><button type="button" class="back" data-to="0">처음부터 다시 고르기</button></div></div>
         </div>
         <div class="result hidden" id="result">
           <div class="chip" id="chip"></div>
@@ -183,7 +221,7 @@ main{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1.2fr) minm
         </div>
       </div>
       <div class="toprint hidden" id="toPrint">
-        <button class="btn big" id="printBtn"><svg viewBox="0 0 24 24"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg>감사 편지지 출력하기</button>
+        <button class="btn big" id="printBtn"><svg viewBox="0 0 24 24"><path d="M7 9V3h10v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg>편지지 출력하기</button>
         <div class="row">
           <button class="btn sec" id="redrawBtn">편지지 모양 바꾸기</button>
           <button class="btn sec" id="homeBtn">처음으로</button>
@@ -200,7 +238,7 @@ main{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1.2fr) minm
    ===================================================================== */
 var CREDIT        = '';   // 영수증 맨 아래 · 화면 오른쪽 위에 넣을 문구 (비워 두면 표시 안 함)
 var KO_TITLE      = '사랑을 담아 전해요';               // 화면 위 제목
-var SUB_TITLE     = '재미있는 소품으로 찰칵, 말풍선에 마음을 담아요';   // 제목 옆 부제목
+var SUB_TITLE     = '소품 쓰고 찰칵, 마음을 담아요';   // 제목 옆 부제목
 
 /* ---- 출력되는 편지지 글자 ---- */
 var LETTER_TITLE  = '감사합니다';             // 받는 분에 제목이 없을 때 쓰는 제목
@@ -252,19 +290,19 @@ var FRAMES = [
  {key:'star',   label:'별'}
 ];
 var STYLE_ICON = {
- flower:'<svg viewBox="0 0 48 48" fill="none" stroke="#c23b62" stroke-width="2.4"><circle cx="24" cy="13" r="7" fill="#fde3ea"/><circle cx="34" cy="21" r="7" fill="#fde3ea"/><circle cx="30" cy="33" r="7" fill="#fde3ea"/><circle cx="18" cy="33" r="7" fill="#fde3ea"/><circle cx="14" cy="21" r="7" fill="#fde3ea"/><circle cx="24" cy="24" r="5" fill="#c23b62"/></svg>',
- heart:'<svg viewBox="0 0 48 48"><path d="M24 41C10 32 5 24 5 17a9.5 9.5 0 0 1 19-3 9.5 9.5 0 0 1 19 3c0 7-5 15-19 24z" fill="#e0607e"/><path d="M15 15a5 5 0 0 1 6-3" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg>',
+ flower:'<svg viewBox="0 0 48 48" fill="none" stroke="#c8202f" stroke-width="2.4"><circle cx="24" cy="13" r="7" fill="#fdecea"/><circle cx="34" cy="21" r="7" fill="#fdecea"/><circle cx="30" cy="33" r="7" fill="#fdecea"/><circle cx="18" cy="33" r="7" fill="#fdecea"/><circle cx="14" cy="21" r="7" fill="#fdecea"/><circle cx="24" cy="24" r="5" fill="#c8202f"/></svg>',
+ heart:'<svg viewBox="0 0 48 48"><path d="M24 41C10 32 5 24 5 17a9.5 9.5 0 0 1 19-3 9.5 9.5 0 0 1 19 3c0 7-5 15-19 24z" fill="#d62839"/><path d="M15 15a5 5 0 0 1 6-3" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg>',
  star:'<svg viewBox="0 0 48 48"><path d="M24 4l5.9 12.4 13.6 1.7-10 9.4 2.6 13.5L24 34.4 11.9 41l2.6-13.5-10-9.4 13.6-1.7z" fill="#ffc94d" stroke="#c99a3c" stroke-width="2" stroke-linejoin="round"/></svg>',
- sheep:'<svg viewBox="0 0 48 48" stroke="#8c2244" stroke-width="2"><path d="M17 36v6M23 36v6M30 36v6M36 36v6" stroke-width="3" stroke-linecap="round"/><g fill="#fff"><circle cx="18" cy="22" r="7"/><circle cx="26" cy="18" r="7"/><circle cx="34" cy="22" r="7"/><circle cx="20" cy="31" r="7"/><circle cx="30" cy="31" r="7"/><circle cx="37" cy="28" r="5"/></g><ellipse cx="27" cy="26" rx="10" ry="7" fill="#fff" stroke="none"/><ellipse cx="11" cy="25" rx="6" ry="7" fill="#8c2244"/></svg>',
- ribbon:'<svg viewBox="0 0 48 48" fill="#fde3ea" stroke="#c23b62" stroke-width="2.4" stroke-linejoin="round"><path d="M24 22C20 12 8 10 8 18s12 8 16 4zM24 22c4-10 16-12 16-4s-12 8-16 4z"/><path d="M22 24l-8 16 5-2 3 5 4-17zM26 24l8 16-5-2-3 5-4-17z"/><circle cx="24" cy="23" r="3.6" fill="#c23b62"/></svg>'
+ sheep:'<svg viewBox="0 0 48 48" stroke="#1f6b45" stroke-width="2"><path d="M17 36v6M23 36v6M30 36v6M36 36v6" stroke-width="3" stroke-linecap="round"/><g fill="#fff"><circle cx="18" cy="22" r="7"/><circle cx="26" cy="18" r="7"/><circle cx="34" cy="22" r="7"/><circle cx="20" cy="31" r="7"/><circle cx="30" cy="31" r="7"/><circle cx="37" cy="28" r="5"/></g><ellipse cx="27" cy="26" rx="10" ry="7" fill="#fff" stroke="none"/><ellipse cx="11" cy="25" rx="6" ry="7" fill="#1f6b45"/></svg>',
+ ribbon:'<svg viewBox="0 0 48 48" fill="#fdecea" stroke="#c8202f" stroke-width="2.4" stroke-linejoin="round"><path d="M24 22C20 12 8 10 8 18s12 8 16 4zM24 22c4-10 16-12 16-4s-12 8-16 4z"/><path d="M22 24l-8 16 5-2 3 5 4-17zM26 24l8 16-5-2-3 5-4-17z"/><circle cx="24" cy="23" r="3.6" fill="#c8202f"/></svg>'
 };
 var FRAME_ICON = {
- double:'<svg viewBox="0 0 48 48" fill="none" stroke="#c23b62" stroke-width="2.4"><rect x="5" y="6" width="38" height="28" rx="7"/><rect x="9" y="10" width="30" height="20" rx="4" stroke-width="1.4"/><path d="M14 34l-1 9 9-9" fill="#fff"/></svg>',
- wiggle:'<svg viewBox="0 0 48 48" fill="none" stroke="#c23b62" stroke-width="2.4" stroke-linejoin="round"><path d="M6 10q3-4 6 0t6 0 6 0 6 0 6 0 6 0v4q4 3 0 6t0 6 0 6q-3 4-6 0t-6 0-6 0-6 0-6 0-6 0v-4q-4-3 0-6t0-6 0-6z"/></svg>',
- cloud:'<svg viewBox="0 0 48 48" fill="none" stroke="#c23b62" stroke-width="2.4"><path d="M12 36a7 7 0 0 1-2-13.7A9 9 0 0 1 26 13a8 8 0 0 1 14 5 7 7 0 0 1-2 18z"/></svg>',
- heart:'<svg viewBox="0 0 48 48" fill="none" stroke="#c23b62" stroke-width="2.6"><path d="M24 41C10 32 5 24 5 17a9.5 9.5 0 0 1 19-3 9.5 9.5 0 0 1 19 3c0 7-5 15-19 24z"/></svg>',
- circle:'<svg viewBox="0 0 48 48" fill="none" stroke="#c23b62" stroke-width="2.4"><ellipse cx="24" cy="21" rx="19" ry="15"/><path d="M15 33l-2 9 9-7"/></svg>',
- star:'<svg viewBox="0 0 48 48" fill="none" stroke="#c23b62" stroke-width="2.4" stroke-linejoin="round"><path d="M24 4l5.9 12.4 13.6 1.7-10 9.4 2.6 13.5L24 34.4 11.9 41l2.6-13.5-10-9.4 13.6-1.7z"/></svg>'
+ double:'<svg viewBox="0 0 48 48" fill="none" stroke="#c8202f" stroke-width="2.4"><rect x="5" y="6" width="38" height="28" rx="7"/><rect x="9" y="10" width="30" height="20" rx="4" stroke-width="1.4"/><path d="M14 34l-1 9 9-9" fill="#fff"/></svg>',
+ wiggle:'<svg viewBox="0 0 48 48" fill="none" stroke="#c8202f" stroke-width="2.4" stroke-linejoin="round"><path d="M6 10q3-4 6 0t6 0 6 0 6 0 6 0 6 0v4q4 3 0 6t0 6 0 6q-3 4-6 0t-6 0-6 0-6 0-6 0-6 0v-4q-4-3 0-6t0-6 0-6z"/></svg>',
+ cloud:'<svg viewBox="0 0 48 48" fill="none" stroke="#c8202f" stroke-width="2.4"><path d="M12 36a7 7 0 0 1-2-13.7A9 9 0 0 1 26 13a8 8 0 0 1 14 5 7 7 0 0 1-2 18z"/></svg>',
+ heart:'<svg viewBox="0 0 48 48" fill="none" stroke="#c8202f" stroke-width="2.6"><path d="M24 41C10 32 5 24 5 17a9.5 9.5 0 0 1 19-3 9.5 9.5 0 0 1 19 3c0 7-5 15-19 24z"/></svg>',
+ circle:'<svg viewBox="0 0 48 48" fill="none" stroke="#c8202f" stroke-width="2.4"><ellipse cx="24" cy="21" rx="19" ry="15"/><path d="M15 33l-2 9 9-7"/></svg>',
+ star:'<svg viewBox="0 0 48 48" fill="none" stroke="#c8202f" stroke-width="2.4" stroke-linejoin="round"><path d="M24 4l5.9 12.4 13.6 1.7-10 9.4 2.6 13.5L24 34.4 11.9 41l2.6-13.5-10-9.4 13.6-1.7z"/></svg>'
 };
 function $(id){return document.getElementById(id);}
 function esc(t){var d=document.createElement('div');d.textContent=String(t==null?'':t);return d.innerHTML;}
@@ -282,9 +320,9 @@ $('credit').textContent=CREDIT;if(!CREDIT)$('credit').classList.add('hidden');
 
 /* 눈 내리기 */
 var SNOW_COUNT=46;   // 화면에 떠다니는 하트 수 (태블릿이 느려지면 줄이기)
-(function(){var s=$('snow'),h='',cols=['#f7a1b5','#f48aa5','#ffc2d1','#e66b8a','#f9b8c8'];
- for(var i=0;i<SNOW_COUNT;i++){var l=Math.random()*100,d=11+Math.random()*12,dl=-Math.random()*22,fs=12+Math.random()*20,o=.45+Math.random()*.45;
-  h+='<i style="left:'+l.toFixed(1)+'%;font-size:'+fs.toFixed(0)+'px;color:'+cols[i%cols.length]+';opacity:'+o.toFixed(2)+';animation-duration:'+d.toFixed(1)+'s;animation-delay:'+dl.toFixed(1)+'s">'+(i%4===3?'♡':'♥')+'</i>';}
+(function(){var s=$('snow'),h='',cols=['#d62839','#e85a66','#2e8b57','#c8202f','#f2a7a7'];
+ for(var i=0;i<SNOW_COUNT;i++){var l=Math.random()*100,d=11+Math.random()*12,dl=-Math.random()*22,fs=18+Math.random()*30,o=.45+Math.random()*.45;
+  h+='<i style="left:'+l.toFixed(1)+'%;font-size:'+fs.toFixed(0)+'px;color:'+(i%3===2?'#a9cddc':cols[i%cols.length])+';opacity:'+o.toFixed(2)+';animation-duration:'+d.toFixed(1)+'s;animation-delay:'+dl.toFixed(1)+'s">'+(i%3===2?'❄':(i%5===4?'♡':'♥'))+'</i>';}
  s.innerHTML=h;})();
 
 /* ---------------- 편지지 고르기 ---------------- */
@@ -293,6 +331,16 @@ $('frames').innerHTML=FRAMES.map(function(f,i){return '<button type="button" cla
 Array.prototype.forEach.call(document.querySelectorAll('.mood.fr'),function(b){
  b.onclick=function(){state.frame=FRAMES[+b.dataset.f];Array.prototype.forEach.call(document.querySelectorAll('.mood.fr'),function(x){x.classList.toggle('on',x===b);});};
 });
+var STEPS=['stepWho','stepPat','stepFr','stepReady'];
+function goStep(n){
+ STEPS.forEach(function(id,i){$(id).classList.toggle('hidden',i!==n);});
+ if(n===3){var w=state.who||RECIPIENTS[0],m=state.mood||MOODS[0],f=state.frame||FRAMES[0];
+  $('sum').innerHTML='<div class="to">'+esc(w.a)+' ♥ '+esc(w.b)+'께</div><div class="ev">'+esc(w.event)+' · '+(w.mode==='congrats'?'축하':'감사')+'</div><div class="st">'+esc(m.label)+' 장식 · '+esc(f.label)+' 편지지</div>';}
+ updateSnap();
+}
+Array.prototype.forEach.call(document.querySelectorAll('.step .back'),function(b){b.onclick=function(){goStep(+b.dataset.to);};});
+Array.prototype.forEach.call(document.querySelectorAll('.mood:not(.fr)'),function(b){b.addEventListener('click',function(){goStep(2);});});
+Array.prototype.forEach.call(document.querySelectorAll('.mood.fr'),function(b){b.addEventListener('click',function(){goStep(3);});});
 function selectDefaults(){
  state.mood=MOODS[0];state.frame=FRAMES[0];
  Array.prototype.forEach.call(document.querySelectorAll('.mood'),function(x){x.classList.toggle('on',x.dataset.i==='0'||x.dataset.f==='0');});
@@ -306,7 +354,7 @@ Array.prototype.forEach.call(document.querySelectorAll('.mood:not(.fr)'),functio
 });
 $('who').innerHTML=RECIPIENTS.map(function(r,i){return '<button type="button" data-w="'+i+'"><span>'+esc(r.a)+'</span><i>♥</i><span>'+esc(r.b)+'</span><span class="ev'+(r.mode==='congrats'?' c':'')+'">'+esc(r.event)+' · '+(r.mode==='congrats'?'축하':'감사')+'</span></button>';}).join('');
 Array.prototype.forEach.call(document.querySelectorAll('#who button'),function(b){
- b.onclick=function(){state.who=RECIPIENTS[+b.dataset.w];Array.prototype.forEach.call(document.querySelectorAll('#who button'),function(x){x.classList.toggle('on',x===b);});updateSnap();audioCtx();loadClips();};
+ b.onclick=function(){state.who=RECIPIENTS[+b.dataset.w];Array.prototype.forEach.call(document.querySelectorAll('#who button'),function(x){x.classList.toggle('on',x===b);});updateSnap();audioCtx();loadClips();goStep(1);};
 });
 function drawPropButtons(){
  $('props').innerHTML=PROPS.map(function(p){return '<button type="button" data-p="'+p.key+'"'+(p.key===propKey?' class="on"':'')+'><span>'+p.icon+'</span>'+esc(p.label)+'</button>';}).join('');
@@ -317,9 +365,9 @@ function drawPropButtons(){
 function updateSnap(){
  var ok=!!state.mood&&!!state.who;
  $('snapBtn').disabled=!ok;
- $('snapLabel').textContent=ok?'사진 찍기':(!state.who?'먼저 받는 분을 골라 주세요':'먼저 줄 장식을 골라 주세요');
+ $('snapLabel').textContent=ok?'사진 찍기':'먼저 받는 분을 골라 주세요';
  $('fileBtn').disabled=!ok;
- $('hint').textContent=ok?'위에서 소품을 고르고, 손가락으로 끌어 얼굴에 맞춘 뒤 [사진 찍기]!':'';
+ $('hint').textContent=ok?'소품을 얼굴에 맞추고 [사진 찍기]!':'';
 }
 /* ---------------- 카메라 ---------------- */
 var CAM_TRIES=[
@@ -473,7 +521,8 @@ function hatBox(h,W,H){var w=h.w*W,cx=h.x*W,by=h.y*H,k=propKey,b;
  else if(k==='wig')b=[-.66,.66,-.5,.5];else if(k==='crown')b=[-.34,.34,-.36,.06];else b=[-.38,.38,.28,.56];
  return {l:cx+b[0]*w,r:cx+b[1]*w,t:by+b[2]*w,b:by+b[3]*w};}
 function scarfBox(){return {l:1,r:0,t:1,b:0};}
-function drawHats(ctx,W,H){hats.forEach(function(h){drawProp(ctx,propKey,h.x*W,h.y*H,h.w*W);});}
+var PROP_GRAY = true;   // 소품을 흑백으로 보여 주기 (출력이 흑백이라서)
+function drawHats(ctx,W,H){ctx.save();if(PROP_GRAY)ctx.filter='grayscale(1)';hats.forEach(function(h){drawProp(ctx,propKey,h.x*W,h.y*H,h.w*W);});ctx.restore();}
 
 drawPropButtons();selectDefaults();
 var ov=$('overlay'),ovx=ov.getContext('2d');
@@ -636,13 +685,13 @@ function retake(){
  if(stream&&stream.active)showLive();else startCamera();
 }
 function resetAll(){
- state.mood=null;state.who=null;Array.prototype.forEach.call(document.querySelectorAll('.mood,#who button'),function(x){x.classList.remove('on');});propKey=PROPS[0].key;drawPropButtons();selectDefaults();
+ state.mood=null;state.who=null;Array.prototype.forEach.call(document.querySelectorAll('.mood,#who button'),function(x){x.classList.remove('on');});propKey=PROPS[0].key;drawPropButtons();selectDefaults();goStep(0);
  hats=[];autoMode=true;$('autoBtn').classList.add('hidden');
  retake();updateSnap();
 }
 function showChoose(){
  $('choose').classList.remove('hidden');$('result').classList.add('hidden');$('toPrint').classList.add('hidden');
- $('rightTitle').innerHTML='<b>1</b>받는 분과 편지지를 골라 주세요';
+ $('rightTitle').innerHTML='<b>1</b>편지지 고르기';
  $('hint').textContent='';var old=$('altLink');if(old)old.remove();
 }
 
@@ -652,7 +701,7 @@ function givePoem(animate){
  $('choose').classList.add('hidden');$('result').classList.remove('hidden');$('toPrint').classList.remove('hidden');
  $('rightTitle').innerHTML='<b>3</b>'+(state.who.mode==='congrats'?'축하':'감사')+' 편지지 완성';
  var fr=state.frame||FRAMES[0];$('chip').innerHTML='<b>'+esc(state.who.a)+' ♥ '+esc(state.who.b)+'</b>께';
- $('printBtn').disabled=true;$('hint').textContent='출력한 편지지 안에 마음을 담아 직접 써 주세요';var old=$('altLink');if(old)old.remove();
+ $('printBtn').disabled=true;$('hint').textContent='편지지에 마음을 담아 써 주세요';var old=$('altLink');if(old)old.remove();
  var card=$('pcard');$('ptl').textContent=state.who.event+' · '+(state.who.mode==='congrats'?'축하':'감사');$('pby').textContent=m.label+' 장식 · '+fr.label+' 편지지';
  card.classList.remove('reveal');void card.offsetWidth;card.classList.add('reveal');
  $('lucky').classList.add('hidden');$('preview').classList.add('hidden');
@@ -677,7 +726,7 @@ function renderReceipt(){
    var all=LETTER_TITLE+RECIPIENTS.map(function(r){return 'To. '+r.a+r.b+'께'+r.title+r.line;}).join('')+FROM_LINE+CHURCH_NAME+RECEIPT_FOOTER+'0123456789.·';
    Promise.all([
     document.fonts.load("60px 'Great Vibes'",THANKS_EN+CONGRATS_EN),
-    document.fonts.load("700 30px 'Gaegu'",all),document.fonts.load("900 40px 'Noto Serif KR'",all),document.fonts.load("700 24px 'Noto Serif KR'",all),
+    document.fonts.load("700 30px 'Gaegu'",all),document.fonts.load("30px 'Jua'",all),document.fonts.load("900 40px 'Noto Serif KR'",all),document.fonts.load("700 24px 'Noto Serif KR'",all),
     document.fonts.load("700 20px 'Noto Sans KR'",all)
 ]).then(go,go);
    setTimeout(go,3000);
@@ -753,7 +802,7 @@ function drawReceipt(){
  var W=576,P=24,tmp=document.createElement('canvas');tmp.width=W;tmp.height=6000;
  var ctx=tmp.getContext('2d'),y=0,PAT=(state.mood||MOODS[0]).key,FR=(state.frame||FRAMES[0]).key,WHO=state.who||RECIPIENTS[0];
  var CONGRATS=WHO.mode==='congrats';
- var SERIF="'Noto Serif KR','Gowun Batang',serif",HAND="'Gaegu','Nanum Pen Script',cursive",SCRIPT="'Great Vibes',cursive";
+ var SERIF="'Noto Serif KR','Gowun Batang',serif",HAND="'Jua','Gaegu',sans-serif",SCRIPT="'Great Vibes',cursive";
  ctx.fillStyle='#fff';ctx.fillRect(0,0,W,tmp.height);ctx.fillStyle='#000';ctx.strokeStyle='#000';
  ctx.textBaseline='top';ctx.textAlign='center';ctx.lineCap='round';ctx.lineJoin='round';
  function fit(s,size,tpl,lh,maxW,minPx){var px=size;for(;;){ctx.font=tpl.replace('{px}',px);if(ctx.measureText(s).width<=(maxW||W-P*2)||px<=(minPx||12))break;px--;}ctx.textAlign='center';ctx.fillText(s,W/2,y);y+=lh||Math.round(px*1.4);return px;}
